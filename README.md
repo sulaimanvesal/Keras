@@ -17,7 +17,7 @@ model.add(Activation('softmax'))
 model.compile(optimizer='sgd', loss='categorical_cross_entropy')
 model.fit(x_train, y_train, verbose=1)
 ```
-The question is that can understand from above code that trining is running well, well here Tensorboard can help solve this problem. For this you need to modify the code, first you need to import Tensorboard from callabcks class and added as an arugment to callackas parameter of fit function:
+The question is that can understand from above code that trining is running well, well here Tensorboard can help solve this problem. For this you need to modify the code, first you need to import Tensorboard from callabcks class and add it as an arugment to callackas parameter of fit() function, keep in mind that the log_dir is the path to save the output of training history into disk:
 
 ```ruby
 from time import time
